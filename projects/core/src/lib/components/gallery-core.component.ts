@@ -19,7 +19,7 @@ import { GalleryConfig } from '../models/config.model';
                       (itemClick)="itemClick.emit($event)"
                       (error)="error.emit($event)">
 
-        <gallery-nav *ngIf="config.nav && state.items.length > 1"
+        <gallery-nav *ngIf="config.nav && state && state.items && state.items.length > 1"
                      [state]="state"
                      [config]="config"
                      (action)="action.emit($event)">
